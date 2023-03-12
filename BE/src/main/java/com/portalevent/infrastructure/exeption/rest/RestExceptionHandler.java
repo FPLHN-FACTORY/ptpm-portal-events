@@ -21,7 +21,7 @@ public final class RestExceptionHandler extends
 
     @ExceptionHandler(RestApiException.class)
     public ResponseEntity<?> handlerException(RestApiException restApiException) {
-        ApiError apiError = new ApiError(restApiException.getMessage());
+        ApiError apiError = new ApiError(restApiException.getStatusCode());
         return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);
     }
 

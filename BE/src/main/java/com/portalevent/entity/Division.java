@@ -20,10 +20,10 @@ import java.io.Serializable;
 @Entity
 public class Division extends PrimaryEntity implements Serializable {
 
-    @Column(length = EntityProperties.LENGTH_ID)
+    @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String todoId;
 
-    @Column(length = EntityProperties.LENGTH_ID)
+    @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String eventId;
 
 }

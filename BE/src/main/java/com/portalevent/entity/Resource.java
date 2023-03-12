@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Nationalized;
 
 import java.io.Serializable;
 
@@ -23,10 +24,15 @@ public class Resource extends PrimaryEntity implements Serializable {
     @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String eventId;
 
+    @Column(length = EntityProperties.LENGTH_NAME, nullable = false)
+    @Nationalized
+    private String name;
+
     @Column(length = EntityProperties.LENGTH_NAME)
     private String path;
 
     @Column(length = EntityProperties.LENGTH_DESCRIPTION)
+    @Nationalized
     private String Description;
 
 }

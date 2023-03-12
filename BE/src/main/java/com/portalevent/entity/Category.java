@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Nationalized;
 
 import java.io.Serializable;
 
@@ -24,6 +25,7 @@ public class Category extends PrimaryEntity implements Serializable {
     private String code;
 
     @Column(length = EntityProperties.LENGTH_NAME)
+    @Nationalized
     private String name;
 
 }

@@ -19,10 +19,10 @@ import java.io.Serializable;
 @Entity
 public class EventOrganizer extends PrimaryEntity implements Serializable {
 
-    @Column(length = EntityProperties.LENGTH_ID)
+    @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String eventId;
 
-    @Column(length = EntityProperties.LENGTH_ID)
+    @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String organizerId;
 
 }

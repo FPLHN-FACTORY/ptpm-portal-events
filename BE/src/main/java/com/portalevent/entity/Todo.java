@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Nationalized;
 
 import java.io.Serializable;
 
@@ -28,6 +29,7 @@ public class Todo extends PrimaryEntity implements Serializable {
     private String code;
 
     @Column(length = EntityProperties.LENGTH_NAME)
+    @Nationalized
     private String name;
 
     @Column
@@ -40,6 +42,7 @@ public class Todo extends PrimaryEntity implements Serializable {
     private TodoStatus status;
 
     @Column(length = EntityProperties.LENGTH_DESCRIPTION)
+    @Nationalized
     private String description;
 
 }

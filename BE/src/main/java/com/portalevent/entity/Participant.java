@@ -23,8 +23,8 @@ public class Participant extends PrimaryEntity implements Serializable {
     @Column(length = EntityProperties.LENGTH_ID, nullable = false)
     private String eventId;
 
-    @Column(length = EntityProperties.LENGTH_ID, nullable = false)
-    private String participantId;
+    @Column(length = EntityProperties.LENGTH_EMAIL, nullable = false)
+    private String email;
 
     @Column
     private Byte randomNumber;

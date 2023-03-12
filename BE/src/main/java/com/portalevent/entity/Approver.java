@@ -31,7 +31,7 @@ public class Approver extends PrimaryEntity implements Serializable {
     @Column(length = EntityProperties.LENGTH_EMAIL, nullable = false)
     private String email;
 
-    @Column(length = EntityProperties.LENGTH_PHONE, nullable = false)
+    @Column(length = EntityProperties.LENGTH_PHONE)
     private String phoneNumber;
 
 }

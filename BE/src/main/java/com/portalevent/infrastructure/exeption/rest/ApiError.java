@@ -13,6 +13,6 @@ import lombok.Setter;
 @Setter
 public class ApiError {
 
-    private String message;
+    private String statusCode;
 
 }

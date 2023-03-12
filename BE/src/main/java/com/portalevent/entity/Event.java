@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Nationalized;
 
 import java.io.Serializable;
 
@@ -35,6 +36,7 @@ public class Event extends PrimaryEntity implements Serializable {
     private String organizerId;
 
     @Column(length = EntityProperties.LENGTH_NAME)
+    @Nationalized
     private String name;
 
     @Column(nullable = false)

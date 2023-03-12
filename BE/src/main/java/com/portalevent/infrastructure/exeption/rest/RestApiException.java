@@ -7,26 +7,21 @@ public class RestApiException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    private String message;
+    private String statusCode;
 
     public RestApiException() {
     }
 
-//    public RestApiException(Message statusCode) {
-//        this.message = statusCode.getMessage();
-//    }
-
-    public RestApiException(String message) {
-        this.message = message;
+    public RestApiException(String statusCode) {
+        this.statusCode = statusCode;
     }
 
-    @Override
-    public String getMessage() {
-        return message;
+    public String getStatusCode() {
+        return statusCode;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
     }
 
 }
